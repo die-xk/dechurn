@@ -19,7 +19,7 @@ export default function Home() {
       if (error) throw error
       alert('Check your email for the confirmation link!')
     } catch (error) {
-      alert(error.message)
+      alert(error instanceof Error ? error.message : 'An error occurred')
     } finally {
       setLoading(false)
     }
